@@ -1,0 +1,68 @@
+{
+  "run_id": "AC_RUN_001",
+  "total_nodes": 6,
+  "nodes": [
+    {
+  "node_index": 0,
+  "event_id": "EVT_FADED_CORRIDOR",
+  "title": "Faded Corridor",
+  "requires_flags": [],
+  "choices": [
+    {
+      "choice_id": "CH_000_A",
+      "label": "Study the carvings",
+      "next": 1,
+      "effects": {
+        "flags_add": ["TEST_FLAG"],
+        "flags_remove": []
+      }
+    },
+    {
+      "choice_id": "CH_000_B",
+      "label": "Turn back",
+      "next": 0,
+      "effects": {
+        "flags_add": [],
+        "flags_remove": []
+      }
+    }
+  ]
+},
+
+    {
+      "node_index": 1,
+      "event_id": "EVT_UNDERGROUND_ALTAR",
+      "title": "Underground Altar",
+    "requires_flags": ["TEST_FLAG"],
+      "choices": [
+        {
+          "choice_id": "CH_001_A",
+          "label": "Touch the altar",
+          "next": 1,
+          "effects": {
+            "flags_add": ["GOD_ATTENTION"],
+            "flags_remove": []
+          }
+        },
+        {
+          "choice_id": "CH_001_B",
+          "label": "Copy the runes",
+          "next": 1,
+          "effects": {
+            "flags_add": [],
+            "flags_remove": []
+          }
+        },
+        {
+          "choice_id": "CH_001_C",
+          "label": "Leave silently",
+          "next": null,
+          "effects": {
+            "flags_add": ["ANONYMOUS"],
+            "flags_remove": []
+          }
+        }
+      ]
+    }
+  ]
+}
